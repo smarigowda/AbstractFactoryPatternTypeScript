@@ -1,0 +1,15 @@
+{
+  "name": "factorymethodpatterntypescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:smarigowda/FactoryMethodPatternTypeScript.git",
+  "author": "Santosh Marigowda <santosh.marigowda2@sky.uk>",
+  "license": "MIT",
+  "scripts": {
+    "test": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
