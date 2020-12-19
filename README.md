@@ -1,2 +1,3 @@
-# FactoryMethodPatternTypeScript
-Factory Method Pattern - using Type Script
+# Abstract Factory Pattern -- TypeScript
+
+Abstract Factory Pattern - using Type Script
