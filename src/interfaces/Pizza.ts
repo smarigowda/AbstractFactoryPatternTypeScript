@@ -1,17 +1,16 @@
+import { Cheese, Clams, Dough, Pepperoni, Sauce, Veggies } from "./ingredients";
+
 export abstract class Pizza {
   private name: string;
-  private dough: string;
-  private sauce: string;
-  private toppings = [];
+  private dough: Dough;
+  private sauce: Sauce;
+  private cheese: Cheese;
+  private pepperoni: Pepperoni;
+  private clams: Clams;
+  private veggies: Veggies[];
 
-  public prepare(): void {
-    console.log(
-      `################### Preparing ${this.name} ###################`
-    );
-    console.log(`Tossing Dough...`);
-    console.log(`Adding Sauce...`);
-    console.log(`Adding Toppings...`);
-  }
+  abstract prepare(): void;
+
   public bake(): void {
     console.log("Baking for 25 min at 350 degrees...");
   }
@@ -24,13 +23,16 @@ export abstract class Pizza {
   public setName(name: string): void {
     this.name = name;
   }
-  public setDough(dough: string): void {
+  public setDough(dough: Dough): void {
     this.dough = dough;
   }
-  public setSauce(sauce: string): void {
+  public setSauce(sauce: Sauce): void {
     this.sauce = sauce;
   }
-  public addToppoing(topping: string): void {
-    this.toppings.push(topping);
+  public addVeggies(veggies: Veggies): void {
+    this.veggies.push(veggies);
+  }
+  public setCheese(cheese: Cheese): void {
+    this.cheese = cheese;
   }
 }
