@@ -6,6 +6,7 @@ import { PizzaIngredientsFactory } from "../interfaces/ingredientsFactory";
 import { CheesePizza } from "../pizas/CheesePizza";
 import { ClamPizza } from "../pizas/ClamPizza";
 import { PepperoniPizza } from "../pizas/PepperoniPizza";
+import { VeggiePizza } from "../pizas/VeggiePizza";
 
 export class ChicagoPizzaStore extends PizzaStore {
   ingredientsFactory: PizzaIngredientsFactory = new ChicagoPizzaIngredientsFactory();
@@ -23,6 +24,11 @@ export class ChicagoPizzaStore extends PizzaStore {
     } else if (pizzaType === PizzaType.Pepperoni) {
       pizza = new PepperoniPizza(this.ingredientsFactory);
       pizza.setName("Chicago Style Pepperoni Pizza");
+    } else if (pizzaType === PizzaType.Veggie) {
+      pizza = new VeggiePizza(this.ingredientsFactory);
+      pizza.setName("Chicago Style Veggie Pizza");
+    } else {
+      throw new Error("type not supported sorry");
     }
     return pizza;
   }

@@ -6,6 +6,7 @@ import { CheesePizza } from "../pizas/CheesePizza";
 import { NYPizzaIngredientsFactory } from "../ingredientsFactories/nyPizzaIngredientsFactory";
 import { ClamPizza } from "../pizas/ClamPizza";
 import { PepperoniPizza } from "../pizas/PepperoniPizza";
+import { VeggiePizza } from "../pizas/VeggiePizza";
 
 export class NYPizzaStore extends PizzaStore {
   nyPizzaIngredientsFactory: PizzaIngredientsFactory = new NYPizzaIngredientsFactory();
@@ -23,6 +24,9 @@ export class NYPizzaStore extends PizzaStore {
     } else if (pizzaType === PizzaType.Pepperoni) {
       pizza = new PepperoniPizza(this.nyPizzaIngredientsFactory);
       pizza.setName("NY Style Pepperoni Pizza...!");
+    } else if (pizzaType === PizzaType.Veggie) {
+      pizza = new VeggiePizza(this.nyPizzaIngredientsFactory);
+      pizza.setName("NY Style Veggie Pizza...!");
     }
     return pizza;
   }
