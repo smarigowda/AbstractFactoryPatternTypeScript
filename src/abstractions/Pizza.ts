@@ -13,7 +13,7 @@ export abstract class Pizza {
   protected sauce: Sauce;
   protected cheese: Cheese;
   protected pepperoni: Pepperoni;
-  protected clams: Clams;
+  protected clam: Clams;
   protected veggies: Veggies[];
 
   abstract prepare(): void;

@@ -8,7 +8,7 @@ export class CheesePizza extends Pizza {
     this.factory = factory;
   }
   prepare() {
-    console.log(`Preparing... ${this.getName()}`);
+    console.log(`########## Preparing ${this.getName()} ##########`);
     this.dough = this.factory.createDough();
     this.cheese = this.factory.createCheese();
     this.sauce = this.factory.createSauce();

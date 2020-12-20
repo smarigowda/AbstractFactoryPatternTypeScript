@@ -1,6 +1,7 @@
 import { Pizza } from "./abstractions/Pizza";
 import { PizzaStore } from "./abstractions/PizzaStore";
 import { PizzaType } from "./enum/pizzaTypes";
+import { ChicagoPizzaStore } from "./stores/chicagoPizzaStore";
 import { NYPizzaStore } from "./stores/nyPizzaStore";
 
 console.log(
@@ -10,4 +11,10 @@ console.log(
 let pizza: Pizza;
 
 let nyPizzaStore: PizzaStore = new NYPizzaStore();
+let chicagoPizzaStore: PizzaStore = new ChicagoPizzaStore();
+
 pizza = nyPizzaStore.orderPizza(PizzaType.Cheese);
+pizza = chicagoPizzaStore.orderPizza(PizzaType.Cheese);
+
+pizza = nyPizzaStore.orderPizza(PizzaType.Clam);
+pizza = chicagoPizzaStore.orderPizza(PizzaType.Clam);
