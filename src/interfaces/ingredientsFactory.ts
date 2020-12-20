@@ -1,5 +1,4 @@
 import { Cheese, Clams, Dough, Pepperoni, Sauce, Veggies } from "./ingredients";
-
 export interface PizzaIngredientsFactory {
   createDough(): Dough;
   createSauce(): Sauce;
