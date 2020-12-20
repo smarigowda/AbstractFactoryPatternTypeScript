@@ -18,3 +18,6 @@ pizza = chicagoPizzaStore.orderPizza(PizzaType.Cheese);
 
 pizza = nyPizzaStore.orderPizza(PizzaType.Clam);
 pizza = chicagoPizzaStore.orderPizza(PizzaType.Clam);
+
+pizza = nyPizzaStore.orderPizza(PizzaType.Pepperoni);
+pizza = chicagoPizzaStore.orderPizza(PizzaType.Pepperoni);

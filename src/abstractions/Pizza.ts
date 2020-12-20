@@ -16,7 +16,7 @@ export abstract class Pizza {
   protected clam: Clams;
   protected veggies: Veggies[];
 
-  abstract prepare(): void;
+  public abstract prepare(): void;
 
   public bake(): void {
     console.log("Baking for 25 min at 350 degrees...");
